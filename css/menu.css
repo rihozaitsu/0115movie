@@ -1,0 +1,248 @@
+@charset "utf-8";
+* {
+  margin:0;
+  padding:0;
+}
+body{
+	width: 100vw;
+	overflow-x: hidden;
+}
+img{
+	vertical-align: bottom;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+.header {
+    width: 100vw;
+    background-color: #F7F7F7;
+    padding-bottom: 1rem;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "M PLUS Rounded 1c";
+	letter-spacing: 5px;
+}
+.header-title {
+    width: 60%;
+    text-align: center;
+    padding: 8rem 0 1rem 1rem;
+    margin: 0 0 2rem 0.5rem; 
+    border-bottom: 1px solid #000;
+}
+.subtitle {
+    font-size: 0.8rem;
+    font-family: "M PLUS Rounded 1c";
+}
+/*見た目を整えています*/
+.menu{
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	position: fixed;
+	z-index: 30000000;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	padding: 14vh 0 0 0;
+	opacity: 0;
+}
+.menu li{
+	font-size: 4vw;
+	padding: 1.2vh 0 1.2vh 0;
+	margin: 2.4vh 6%;
+}
+.menu li span{
+	margin: auto 15px auto auto;
+	color: #333;
+	font-size:12px;
+}
+.menu a{
+	color: #000;
+	text-decoration: none;
+}
+/* ボタンの見た目 */
+.btn_wrap{
+	mix-blend-mode: exclusion;
+	position: fixed;
+	z-index: 400000000;
+	right: 0;
+	margin:2vh 0 4vh auto;
+	width: 18vw;
+}
+.btn{
+	z-index: 400000000;
+	position: absolute;
+	width: 18vw;
+	height: 18vw;
+}
+.btn2{
+	z-index: 400000000;
+	transform: scale(0.7);
+	position: absolute;
+	width: 18vw;
+	height: 18vw;
+	opacity: 0;
+}
+
+/* ボタン切り替えアニメーション */
+.btnout{
+	animation: btnout 0.5s forwards;
+}
+@keyframes btnout{
+	100%{
+		opacity: 0;
+		transform: scale(0.1);
+	}
+}
+.btnchange{
+	animation: btnchange 0.5s forwards;
+}
+@keyframes btnchange{
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/*メニュー展開時のアニメーション*/
+.over{
+	display: block;
+	animation: overmenu 0.4s forwards;
+}
+@keyframes overmenu{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+.footer h4 {
+    padding-bottom: 1rem;
+}
+
+.contact-back {
+    width: 100%;
+    background-color: #313131;
+}
+
+.blog-back {
+    width: 100%;
+    background-color: #505050;
+}
+
+.contact, .blog {
+    padding: 3rem;
+    color: #fff;
+}
+
+.globalfooter {
+    background-color: #000;
+    padding: 5rem 1rem 3rem;
+}
+
+
+
+.globalfooter .logo img{
+    width: 100px;
+}
+
+.saitomap {
+
+}
+
+.footer-menu ul li{
+    width: 80%;
+    height: 4rem;
+    line-height: 3rem;
+    padding-left: 2rem;
+}
+
+.footer-menu ul {
+    padding: 2rem  0;
+    border-bottom: 1px solid #333333;
+    border-top: 1px solid #333333;
+} 
+
+.footer-menu ul li a{
+    color: #fff;
+    font-size: 1.0rem;
+}
+
+.footer-menu ul li a span {
+    font-size: 0.8rem; 
+    color: #333333;
+    margin-right: 1rem;
+}
+
+.copy-right {
+    background-color: #000;
+    padding: 2rem 0 5rem 3rem;
+    font-size: 0.8rem;
+    color: #333333;
+}
+
+
+@media screen and (max-width:767px) {
+.pc{
+	display: none;
+}
+}
+@media screen and (min-width:768px){
+.sp{
+	display: none;
+}
+}
+@media screen and (min-width:901px) {
+	.btn_wrap{
+		width: 6rem;
+		margin: 6vh 5vw 4vh auto;;
+	}
+	
+	.btn{
+		width: 6rem;
+		height: 6rem;
+	}
+	.btn2{
+		width: 6rem;
+		height: 6rem;
+	}
+	.menu ul{
+		position: relative;
+		width: 65%;
+		left: 35%
+	}
+	
+	.menu .pc video{
+		top: 0;
+		right: 55%;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
+	.menu li{
+		margin: 2.4vh 10%;
+		position: relative;
+		z-index: 100000;
+		font-size: 24px;
+	}
+
+
+	.contact-back, .blog-back {
+		width: 50%;
+		float: left;
+	}
+	
+	.contact, .blog {
+		padding: 4rem;
+	}
+	
+	.footer-menu ul {
+		display: flex;
+		padding: 4rem 0 6rem; 
+		border-bottom: none;
+	} 
+}
+
